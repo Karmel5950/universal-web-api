@@ -2689,12 +2689,12 @@
           "input_box": "textarea[data-testid=\"chat_input_input\"], textarea[placeholder], textarea",
           "send_btn": "button[data-testid=\"chat_input_send_button\"], button[aria-label*=\"发送\"], button[type=\"submit\"]",
           "result_container": "main [aria-label=\"doc_editor\"], [data-testid=\"message_content\"], [data-testid=\"message-content\"]",
-          "new_chat_btn": "[data-testid=\"create_conversation_button\"], [data-testid=\"create-new-chat-button\"], button[aria-label*=\"新对话\"]"
+          "new_chat_btn": "xpath://span[normalize-space(text())=\"新对话\"]/ancestor::div[contains(@class,\"sidebar_nav_item\")][1]"
         },
         "workflow": [
           {
-            "action": "KEY_PRESS",
-            "target": "ctrl+k",
+            "action": "CLICK",
+            "target": "new_chat_btn",
             "optional": true,
             "value": null
           },
